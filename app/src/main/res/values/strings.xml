@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RESMS (SMS to Browser)</string>
+    <string name="phoneNumber">Phone # to listen to</string>
+    <string name="rules">1) Network should be on for browser to open. \n2) All Credit is saved by SIM Card Number.\n3) If Device rebooted you most re-open application for it to be active.\n4) Most have a default browser selected.</string>
+</resources>

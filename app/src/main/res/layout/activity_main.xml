@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.scriptingninja.smsb.MainActivity">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="62dp"
+            tools:layout_editor_absoluteY="55dp">
+
+            <LinearLayout
+                android:id="@+id/register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:padding="10dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="10sp"
+                    android:text="Welcome RESMS a SMS to Browser (v1.12.0)"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textStyle="bold"
+                    android:typeface="normal"
+                    app:layout_constraintTop_toTopOf="@+id/phoneNumber" />
+
+                <EditText
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789+"
+                    android:hint="@string/phoneNumber"
+                    android:inputType="number" />
+
+                <Button
+                    android:id="@+id/rSMSM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:elevation="1dp"
+                    android:text="Register to SMS"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+                    app:layout_constraintBottom_toBottomOf="@+id/phoneNumber" />
+
+                <Button
+                    android:id="@+id/urSMSM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/holo_red_light"
+                    android:elevation="1dp"
+                    android:text="Unregister to SMS"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button.Colored"></Button>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/creditView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/register">
+
+                <TextView
+                    android:id="@+id/textCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text='Your Credit is 0'
+                    android:textAlignment="center"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/textPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text='Listening to ""'
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/textSim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=''
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/noNetwork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="20sp"
+                    android:text='There is no network available'
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/refreshNetwork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="1dp"
+                    android:text="Check Network" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ruleslabel"
+                    android:lineSpacingExtra="10sp"
+                    android:text="Rules"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="10sp"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ruleslabel"
+                    android:text="@string/rules" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/billing"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/buyCredit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/holo_green_light"
+                    android:text="Buy Credit" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10pt"
+                    android:text="$5.99 for 10 credits"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
